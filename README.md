@@ -12,3 +12,5 @@ And the enter cmd enter below  commangs
 -> sqlite3 hpmanagement.db
 ->.tables
 (after enter that line that show User table if it doesn't shows your database creation may be wrong!)
+
+if SQLALCHEMY_TRACK_MODIFICATIONS error shows, Enter your frst quary mannualy then run the application.
