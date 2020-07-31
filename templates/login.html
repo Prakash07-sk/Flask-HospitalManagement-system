@@ -1,0 +1,20 @@
+{% include 'link.html' %}
+<title>{{title}}</title>
+<link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+<body class="text-center">
+    <form class="form-signin" method="POST" action="/login">
+  <img class="mb-4" src="../static/img/login.svg" alt="" width="92" height="92">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <p style="color: red;">{{error}}</p> 
+
+  <input type="text" id="inputEmail" class="form-control" placeholder="User Name" name="username" required autofocus>
+  <br>
+  
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required minlength="3">
+  <div class="checkbox mb-3">
+    
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted"></p>
+</form>
+</body>

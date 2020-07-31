@@ -1,0 +1,55 @@
+{% extends 'content_page.html' %}
+     {% block body %}
+     <title>{{title}}</title>
+     <link rel="stylesheet" type="text/css" href="/static/css/successpage.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<body>
+	<form name="DeletePatient" method="POST" action="/DeletePatient">
+	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  
+  <input class="form-control form-control-dark w-100" type="text"name="ssnid" placeholder="Enter Patient SSNID" aria-label="Search" minlength="9" required>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <button type="submit" class="btn btn-secondary"name="action" value="search">search</button>
+
+    </li>
+  </ul>
+</nav>
+</form>
+<h3 style="color: red">{{message}}</h3>
+
+<h1 class="ml10">
+  <span class="text-wrapper">
+    <span class="letters">{{success}}</span>
+  </span>
+</h1>
+
+<script type="text/javascript">
+  var textWrapper = document.querySelector('.ml10 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml10 .letter',
+    rotateY: [-90, 0],
+    duration: 1300,
+    delay: (el, i) => 45 * i
+  }).add({
+    targets: '.ml10',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'DeletePatient.html' %}
+     {% block body %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/tableform.css">
+<form method="POST" action="/DeletePatient">
+  <ul class="inline">
+    <li class="grey">SSNID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" name="ssnid" value={{ssnid}}  disabled="disabled" style="border: none;" ></li>
+    <li>First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{fname}}</li>
+    <li>Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{lname}}</li>
+    <li>Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{age}}</li>
+    <li>Date of Join &nbsp;&nbsp;&nbsp;&nbsp;:{{doj}}</li>
+    <li>Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{address}}</li>
+    <li>Country &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{country}}</li>
+    <li>State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{state}}</li>
+    <li>Bed Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{bedtype}}</li>
+    <li class="grey"><button class="btn btn-primary btn-lg btn-block" name="action" value="delete"type="submit">Delete Patient's Details</button></li>
+  </ul>
+
+</form>
+
+
+
+
+
+
+
+{% endblock %}
